@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adam Freemer Theoretical Paleotechnoligist">
+    <meta name="author" content="Adam Freemer">
+
+    <title>Adam Freemer | Greetings</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <link href="assets/css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="background-image-overlay"></div>
+
+    <div id="outer-background-container" data-default-background-img="assets/images/other_images/bg5.jpg" style="background-image:url(assets/images/other_images/bg5.jpg);"></div>
+    <!-- end: #outer-background-container -->    
+
+    <!-- Outer Container -->
+    <div id="outer-container">
+
+      <!-- Left Sidebar -->
+      <section id="left-sidebar">
+        
+        <div class="logo">
+          <!-- <a href="#intro" class="link-scroll"><img src="assets/images/other_images/logo.png" alt="Twilli Air"></a>
+        </div><! -->
+
+        <!-- Menu Icon for smaller viewports -->
+        <div id="mobile-menu-icon" class="visible-xs" onClick="toggle_main_menu();"><span class="glyphicon glyphicon-th"></span></div>
+
+        <ul id="main-menu">
+          <li id="menu-item-text" class="menu-item scroll"><a href="#intro">home</a></li>
+          <li id="menu-item-carousel" class="menu-item scroll"><a href="#carousel">portfolio</a></li>
+          <li class="menu-item scroll"><a href="http://blog.adamfreemer.net">blog</a></li>
+          <li id="menu-item-contact" class="menu-item scroll"><a href="#contact">contact</a></li>
+
+          <!-- <li id="menu-item-featured" class="menu-item scroll"><a href="#featured">Featured</a></li>
+          <li id="menu-item-contact" class="menu-item scroll"><a href="#contact">Contact</a></li>
+        </ul> -->
+
+      </section><!-- #left-sidebar -->
+      <!-- end: Left Sidebar -->
+
+      <section id="main-content" class="clearfix">
+        
+        <article id="intro" class="section-wrapper clearfix" data-custom-background-img="assets/images/other_images/bg5.jpg">
+          <div class="content-wrapper clearfix">
+            <div class="col-sm-10 col-md-9 pull-right">
+
+                <section class="feature-text">
+                  <h1>Adam Freemer</h1>
+                  <p>Developer and Technologist</p>
+                  <p><a href="#contact" class="link-scroll btn btn-outline-inverse btn-lg">contact me</a></p>
+                </section>
+
+            </div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+
+        <article id="contact" class="section-wrapper clearfix" data-custom-background-img="assets/images/other_images/bg4.jpg">
+          <div class="content-wrapper clearfix">
+            
+              <h1 class="section-title">Contact</h1>
+              
+                <!-- CONTACT DETAILS -->
+                <div class="contact-details col-sm-5 col-md-3">
+                  <p>Philadelpia, USA</p>
+                  <p><a href="mailto:a@freemer.com">a@freemer.com</a></p>
+                  <p><a href="skype:afreemer">skype: afreemer</a></p>
+                  <p><a href="http://www.adamfreemer.net/AdamFreemerResume.pdf" target="blank">Resumé</a></p>
+                </div>
+                <!-- END: CONTACT DETAILS -->
+
+                <!-- CONTACT FORM -->
+                <div class="col-sm-7 col-md-9">
+                  <form class="form-style validate-form clearfix" action="assets/php/mail.php" method="POST" role="form">
+
+                    <!-- form left col -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" class="text-field form-control validate-field required" data-validation-type="string" id="form-name" placeholder="Full Name" name="name">
+                      </div>  
+                      <div class="form-group">
+                        <input type="email" class="text-field form-control validate-field required" data-validation-type="email" id="form-email" placeholder="Email Address" name="email">
+                      </div>
+                      <div class="form-group">
+                        <input type="tel" class="text-field form-control validate-field phone" data-validation-type="phone" id="form-contact-number" placeholder="Contact Number" name="contact_number">
+                      </div>                 
+                    </div><!-- end: form left col -->
+
+                    <!-- form right col -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <textarea placeholder="Message..." class="form-control validate-field required" name="message"></textarea>
+                      </div> 
+                      <div class="form-group">
+                        <img src="assets/images/theme_images/loader-form.GIF" class="form-loader">
+                        <button type="submit" class="btn btn-sm btn-outline-inverse">Submit</button>
+                      </div> 
+                      <div class="form-group form-general-error-container"></div>           
+                    </div><!-- end: form right col -->
+
+                  </form>
+                </div><!-- end: CONTACT FORM -->
+
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+
+
+
+        <!-- ==================== SECTION TYPE: Carousel ==================== -->
+        <article id="carousel" class="section-wrapper clearfix" data-custom-background-img="assets/images/other_images/bg6.jpg">
+          <div class="content-wrapper clearfix">
+
+            <!-- Start: Section content to edit -->
+              <div id="features-carousel" class="carousel slide with-title-indicators max-height" data-height-percent="70" data-ride="carousel">
+                
+                <!-- Indicators - slide navigation -->
+                <!-- each slide should have data-slide-to set to the index of the slide (starting from 0), and a short title link for the slide -->
+                <ol class="carousel-indicators title-indicators">
+                  <li data-target="#features-carousel" data-slide-to="0" class="active">[ &nbsp;&nbsp;dev&nbsp;&nbsp; ]</li>
+                  <li data-target="#features-carousel" data-slide-to="1">[ &nbsp;&nbsp;design&nbsp;&nbsp; ]</li>
+                  <li data-target="#features-carousel" data-slide-to="2">[ &nbsp;&nbsp;1&nbsp;&nbsp; ]</li>
+                  <li data-target="#features-carousel" data-slide-to="3">[ &nbsp;&nbsp;2&nbsp;&nbsp; ]</li>
+                  <li data-target="#features-carousel" data-slide-to="4">[ &nbsp;&nbsp;3&nbsp;&nbsp; ]</li>
+                  <li data-target="#features-carousel" data-slide-to="5">[ &nbsp;&nbsp;4&nbsp;&nbsp; ]</li>    
+                  <li data-target="#features-carousel" data-slide-to="6">[ &nbsp;&nbsp;5&nbsp;&nbsp; ]</li>                 
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+
+ 
+                  <!-- CAROUSEL SLIDE 0 -->
+                  <div class="item active">
+                    <div class="carousel-text-content">
+                      <!-- start: slide content to edit -->
+
+                      <!-- if you want to use bootstrap glyphicons instead, replace the above <img> with the commented <span> below -->
+                      <!-- <span class="icon glyphicon glyphicon-lock"></span> -->
+                      <h3>Web Development</h3>
+                      <p>My design approach is rooted in clean, minimal, responsive design, that conveys the client's message or content with elegance and simplicity. I specialize in Ruby on Rails web development but believe in utilizing whatever web technology is best suited for the project at hand.</p>
+                      <!-- to make a popup/modal link add an onClick function call to the function: 
+                        - populate_and_open_modal(event, '[id of popup content container - see below]') -->
+                      <p><a href="http://www.linkedin.com/in/adamfreemer" target="_blank" class="btn btn-outline-inverse btn-sm">Connect with me on LinkedIn</a></p>
+
+                    </div>
+                  </div><!-- .item -->
+                  <!-- END: CAROUSEL SLIDE 0 -->
+
+                  <!-- CAROUSEL SLIDE 01 -->
+                  <div class="item">
+                    <div class="carousel-text-content">
+
+
+                      <h4>Design and Engineering</h4>
+                      <p>I am also a passionate industrial designer, audio engineer and electronic musician. My minimalistic but functional design aesthetic carries over into these areas of expertise as well. A few of my projects:</p>
+
+                      <p><a href="http://www.xfxaudio.com" target="_blank" class="btn btn-outline-inverse btn-sm">A MIDI control device for performing dj's and musicians</a></p>
+                      <p><a href="http://content.yudu.com/Library/A1rlvv/mondodrMarApr2011Iss/resources/94.htm" target="_blank" class="btn btn-outline-inverse btn-sm">Nightclub audio engineering</a></p>
+                      <p><a href="https://soundcloud.com/adamfreemer" target="_blank" class="btn btn-outline-inverse btn-sm">Music</a></p>
+
+                    </div>
+                  </div><!-- .item -->
+                  <!-- END: CAROUSEL SLIDE 01 -->
+
+                  <!-- CAROUSEL SLIDE 1 -->
+                  <div class="item">
+                    <div class="carousel-text-content">
+                      <a href="http://www.adamfreemer.com" target="_blank"><img src="assets/images/other_images/carousel-1.png" class="icon" alt="Lorem Ipsum"></a>
+                      <h4>adamfreemer.com</h2>
+                      <p>Relevant technologies: responsive design, HTML5, CSS3, Javascript, jQuery, PHP.</p>
+
+                      <p><a href="http://www.adamfreemer.com" target="_blank" onclick="populate_and_open_modal(event, 'modal-content-2');" class="btn btn-outline-inverse btn-sm">view site</a></p>
+                    </div>
+                  </div><!-- .item -->
+                  <!-- END: CAROUSEL SLIDE 1 -->
+
+                  <!-- CAROUSEL SLIDE 2 -->
+                  <div class="item">
+                    <div class="carousel-text-content">
+                      <a href="http://gs-windpowerservices.com" target="_blank"><img src="assets/images/other_images/carousel-2.png" class="icon" alt="Lorem Ipsum"></a>
+                      <h4>gs-windpowerservices.com</h2>
+                      <p>Relevant technologies: responsive design, twitter bootstrap, HTML5, CSS3, Javascript, jQuery.</p>
+
+                      <p><a href="http://www.gs-windpowerservices.com" target="_blank" onclick="populate_and_open_modal(event, 'modal-content-2');" class="btn btn-outline-inverse btn-sm">view site</a></p>
+                    </div>
+                  </div><!-- .item -->
+                  <!-- END: CAROUSEL SLIDE 2 -->
+
+                  <!-- CAROUSEL SLIDE 3 -->
+                  <div class="item">
+                    <div class="carousel-text-content">
+                      <a href="http://nextgenlifelabs.com/" target="_blank"><img src="assets/images/other_images/carousel-3.png" class="icon" alt="Lorem Ipsum"></a>
+                      <h4>nextgenlifelabs.com</h2>
+                      <p>Relevant technologies: responsive design, twitter bootstrap, HTML5, CSS3, Javascript, jQuery, PHP.</p>
+
+                      <p><a href="http://www.nextgenlifelabs.com" target="_blank" onclick="populate_and_open_modal(event, 'modal-content-2');" class="btn btn-outline-inverse btn-sm">view site</a></p>
+                    </div>
+                  </div><!-- .item -->
+                  <!-- END: CAROUSEL SLIDE 3 -->       
+
+                  <!-- CAROUSEL SLIDE 4 -->
+                  <div class="item">
+                    <div class="carousel-text-content">
+                      <a href="http://www.syntekrecordings.com" target="_blank"><img src="assets/images/other_images/carousel-4.png" class="icon" alt="Lorem Ipsum"></a>
+                      <h4>syntekrecordings.com</h2>
+                      <p>Relevant technologies: responsive design, HTML5, CSS3, Javascript, jQuery, PHP.</p>
+
+                      <p><a href="http://www.syntekrecordings.com" target="_blank" onclick="populate_and_open_modal(event, 'modal-content-2');" class="btn btn-outline-inverse btn-sm">view site</a></p>
+                    </div>
+                  </div><!-- .item -->
+                  <!-- END: CAROUSEL SLIDE 4 -->   
+
+                  <!-- CAROUSEL SLIDE 5 -->
+                  <div class="item">
+                    <div class="carousel-text-content">
+                      <a href="http://www.xfxaudio.com" target="_blank"><img src="assets/images/other_images/carousel-5.png" class="icon" alt="Lorem Ipsum"></a>
+                      <h4>xfxaudio.com</h2>
+                      <p>Relevant technologies: Responsive design, Wordpress, CMS, CSS3, HTML5, jQuery, PHP.</p>
+
+                      <p><a href="http://www.xfxaudio.com" target="_blank" onclick="populate_and_open_modal(event, 'modal-content-2');" class="btn btn-outline-inverse btn-sm">view site</a></p>
+                    </div>
+                  </div><!-- .item -->
+                  <!-- END: CAROUSEL SLIDE 5 -->   
+
+                </div><!-- .carousel-inner -->
+
+                <!-- Controls -->
+                <!-- the left/right arrows to move from one slide to the other -->
+                <a class="left carousel-control" href="#features-carousel" data-slide="prev"></a>
+                <a class="right carousel-control" href="#features-carousel" data-slide="next"></a>
+
+              </div><!-- #about-carousel -->
+
+            <!-- End: Section content to edit -->
+
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+        <!-- ==================== END: SECTION TYPE: Carousel ==================== -->
+
+      </section><!-- #main-content -->
+
+      <!-- Footer -->
+      <section id="footer">
+
+        <!-- Go to Top -->
+        <div id="go-to-top" onclick="scroll_to_top();"><span class="icon glyphicon glyphicon-chevron-up"></span></div>
+
+        <ul class="social-icons">
+          <li><a href="http://www.twitter.com/AdamFreemer" target="_blank" title="Twitter"><img src="assets/images/theme_images/social_icons/twitter.png" alt="Twitter"></a></li>
+          <li><a href="https://plus.google.com/+AdamFreemerRules" target="_blank" title="Google+"><img src="assets/images/theme_images/social_icons/googleplus.png" alt="Google+"></a></li>
+          <li><a href="https://github.com/AdamFreemer" target="_blank" title="Github"><img src="assets/images/theme_images/social_icons/github.png" alt="Google+"></a></li>
+          <li><a href="skype:afreemer" target="_blank" title="Skype"><img src="assets/images/theme_images/social_icons/skype.png" alt="Google+"></a></li>
+        </ul>
+
+        <!-- copyright text -->
+        <div class="footer-text-line">&copy; 2014 Adam Freemer Designs</div>
+      </section>
+      <!-- end: Footer -->      
+
+    </div><!-- #outer-container -->
+    <!-- end: Outer Container -->
+
+    <!-- Modal -->
+    <!-- DO NOT MOVE, EDIT OR REMOVE - this is needed in order for popup content to be populated in it -->
+    <div class="modal fade" id="common-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <div class="modal-body">
+          </div><!-- .modal-body -->
+        </div><!-- .modal-content -->
+      </div><!-- .modal-dialog -->
+    </div><!-- .modal -->    
+
+    <!-- Javascripts
+    ================================================== -->
+
+    <!-- Jquery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Easing - for transitions and effects -->
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+
+    <!-- background image strech script -->
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <!-- background image fix for IE 9 or less
+       - use same background as set above to <body> -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      jQuery("#outer-background-container").backstretch("assets/images/other_images/bg5.jpg");
+    });
+    </script> 
+    <![endif]-->  
+
+    <!-- detect mobile browsers -->
+    <script src="assets/js/detectmobilebrowser.js"></script>
+
+    <!-- Custom functions for this theme -->
+    <script src="assets/js/functions.min.js"></script>
+    <script src="assets/js/initialise-functions.js"></script>
+
+    <!-- IE9 form fields placeholder fix -->
+    <!--[if lt IE 9]>
+    <script>contact_form_IE9_placeholder_fix();</script>
+    <![endif]-->  
+
+  </body>
+</html>
