@@ -1,4 +1,4 @@
-/* 
+/*
  * GLOBAL VARIABLES
  */
 
@@ -6,7 +6,7 @@
 window.xs_screen_max = 768;
 window.sm_screen_max = 992;
 
-/* 
+/*
  * ================================================================
  * VIEWPORT
  *
@@ -47,7 +47,7 @@ function toggle_main_menu()
         else {
             main_menu.addClass("menu_opened_on_xs").removeClass("menu_closed_on_xs").slideDown("fast", function(){
                 mobile_menu_icon.addClass("active");
-            });            
+            });
         }
     }
     // end: only applies for mobile window widths
@@ -80,12 +80,12 @@ function main_menu_visiblity_on_resize()
         if (main_menu.hasClass("menu_closed_on_xs"))
         {
             main_menu.hide();
-        } 
+        }
         // if menu was open on small (mobile/xs) viewport, ensure it remains open
         if (main_menu.hasClass("menu_opened_on_xs"))
         {
             main_menu.show();
-        }       
+        }
     }
 }
 
@@ -93,13 +93,13 @@ function main_menu_visiblity_on_resize()
  * ================================================================
  * Sections Content Vertical Position
  *
- * By default, main content for each section is positioned at the bottom of the page. 
+ * By default, main content for each section is positioned at the bottom of the page.
  * This function checks the content-wrapper height, and if it is bigger than 80% of the window height, content-wrapper is positioned statically so that a user can scroll down the page, and content is not hidden.
  *
  * This function only applies for non-mobile viewports (when window width is larger than 768px), since on smaller screens, the layout is different
  */
 function sections_content_vertical_position()
-{  
+{
     // only applies for non-mobile window widths (see comment above)
     if (viewport().width > window.xs_screen_max)
     {
@@ -137,9 +137,9 @@ function sections_content_vertical_position()
                 var section_vertical_offset = $(this).offset().top;
                 $('html, body').stop().animate({
                     scrollTop: section_vertical_offset
-                }, 500,'easeInOutCubic');                    
-            } 
-            */            
+                }, 500,'easeInOutCubic');
+            }
+            */
         });
         // end: for each section
     }
@@ -197,16 +197,16 @@ function initialise_general_links_click_events()
                         $("#main-content").removeClass("same_page_link_in_action");
 
                         // set visible section to active
-                        update_active_sections_on_scroll();                 
-                    });                  
+                        update_active_sections_on_scroll();
+                    });
 
-                    event.preventDefault();                     
+                    event.preventDefault();
                 }
 
                 // if element with that ID doesn't exist
                 else {
-                    return false; 
-                } 
+                    return false;
+                }
             }
             // end: if link is to an ID of an element (anchor link)
 
@@ -217,13 +217,13 @@ function initialise_general_links_click_events()
             // end: normal link
 
         }
-        // end: if link is not empty 
+        // end: if link is not empty
 
         // empty link
         else {
-            event.preventDefault(); 
-            return false;   
-        } 
+            event.preventDefault();
+            return false;
+        }
     });
     // end: if any link inside the page is clicked
 }
@@ -249,7 +249,7 @@ function initialise_main_menu_click_events()
         var first_character_of_link = clicked_link_href.substr(0,1); // will be used below
         var clicked_link_parent_menu_item = $(this).parent(".menu-item");
         var link_menu_item_id = clicked_link_parent_menu_item.attr("id");
-        
+
         // if menu item has "scroll" class, and links to a section id (starts with #) load scroll function
         if (clicked_link_parent_menu_item.hasClass("scroll") && first_character_of_link == "#")
         {
@@ -263,17 +263,17 @@ function initialise_main_menu_click_events()
 
             scroll_to_section(clicked_link_href, clicked_menu_item_id, change_background);
 
-            event.preventDefault(); // stop link from default action 
+            event.preventDefault(); // stop link from default action
         }
 
         // if menu item does NOT have "scroll" class, default link action will apply
-        else 
+        else
         {
             // if fake link ("#") or empty, do nothing
-            if (clicked_link_href === undefined || clicked_link_href == "" || clicked_link_href == "#") 
-            { 
-                event.preventDefault(); 
-                return false; 
+            if (clicked_link_href === undefined || clicked_link_href == "" || clicked_link_href == "#")
+            {
+                event.preventDefault();
+                return false;
             }
         }
 
@@ -288,7 +288,7 @@ function initialise_main_menu_click_events()
  *
  * @param target_section - section id - the id of the section wrapper to which to scroll to
  * @param clicked_menu_item_id - menu item id - the id of the clicked menu item (if function called after clicking on a menu item)
- * @param change_background - true or false - (default true) if false, do not change background on scroll 
+ * @param change_background - true or false - (default true) if false, do not change background on scroll
  */
 function scroll_to_section(target_section_id, clicked_menu_item_id, change_background)
 {
@@ -307,8 +307,8 @@ function scroll_to_section(target_section_id, clicked_menu_item_id, change_backg
             }, 1500,'easeInOutCubic', function(){
 
                 // remove class used to identify that section is "in action", so that no other scroll functions conflict
-                $("#main-content").removeClass("same_page_link_in_action");                
-            });  
+                $("#main-content").removeClass("same_page_link_in_action");
+            });
 
             // set section to active
             set_section_to_active(target_section_id, clicked_menu_item_id, '', change_background);
@@ -335,7 +335,7 @@ function scroll_to_section(target_section_id, clicked_menu_item_id, change_backg
  * @param target_section - section id - the id of the active section wrapper
  * @param clicked_menu_item_id - menu item id - the id of the clicked menu item (if function called after clicking on a menu item)
  * @param called_on_scroll - true or false - if set to true, this function was called when scrolling, hence background changes should be faster
- * @param change_background - true or false - (default true) if false, do not change background on scroll 
+ * @param change_background - true or false - (default true) if false, do not change background on scroll
  */
 function set_section_to_active(target_section_id, clicked_menu_item_id, called_on_scroll, change_background)
 {
@@ -377,7 +377,7 @@ function set_section_to_active(target_section_id, clicked_menu_item_id, called_o
             // if target section wrapper has custom background set
             if (section_custom_background !== undefined && section_custom_background != "")
             {
-                var transition_speed = (called_on_scroll != true) ? 1500 : 550; // crossfading speed should be faster when function called on scroll
+                var transition_speed = (called_on_scroll != true) ? 4500 : 4500; // crossfading speed should be faster when function called on scroll
 
                 $("#outer-background-container").backstretch(section_custom_background, {fade:transition_speed});
             }
@@ -441,7 +441,7 @@ function update_active_sections_on_scroll(section_wrappers, amount_of_pixels_as_
         if (!current_scroll_section.hasClass("active"))
         {
             set_section_to_active(active_section_id, '', true);
-        }        
+        }
     }
 }
 
@@ -521,10 +521,10 @@ function add_clear_items_to_fix_grid_items_different_heights_issue() {
             // add clearfixes after every 2 items (for 2 cols grid)
             list_grid.find(".grid-item:nth-of-type(3n+3)").after('<article class="clearfix"></article>');
             return false;
-        }     
+        }
 
     }
-    // end: if there are grid items   
+    // end: if there are grid items
 }
 
 /*
@@ -556,10 +556,10 @@ function effect_fade_out_inactive_grid_items() {
             // on mouse out
                 var this_item_content = $(this);
 
-                this_item_content.css({"opacity":0.3}); // fade out this              
+                this_item_content.css({"opacity":0.3}); // fade out this
 
             });
-            // end: on hover of each grid-item content            
+            // end: on hover of each grid-item content
 
             // ensure that on mouse out of grid, all its items are not faded
             this_project_grid.hover(function(){}, function(){
@@ -571,7 +571,7 @@ function effect_fade_out_inactive_grid_items() {
         });
         // end: for each projects grid with effect
     }
-    // end: if there are project-grid sections with effect activated  
+    // end: if there are project-grid sections with effect activated
 }
 
 /*
@@ -603,7 +603,7 @@ function set_height_of_parent_content_wrappers()
             }
 
             // else, if no defined percentage height is set, set a default 80% height to the content-wrapper
-            else 
+            else
             {
                 parent_content_wrapper.css({ "height":"80%" });
             }
@@ -653,7 +653,7 @@ function set_equal_height_to_all_carousel_slides_on_small_displays()
         // end: if on small displays
 
         // on larger displays
-        else 
+        else
         {
             $(this).parents(".section-wrapper").removeClass("modified-height");
             $(this).removeClass("slides-height-modified").find(".item .carousel-text-content").css({ "height":"100%" });
@@ -689,28 +689,28 @@ function populate_and_open_modal(event, modal_content_id)
         modal_body.empty().html(modal_content); // first empty the modal body and then populate it with new content
 
         // open modal (popup)
-        modal.modal(); 
+        modal.modal();
 
-        // when modal is shown, position it in the middle of the page 
+        // when modal is shown, position it in the middle of the page
         modal.on('shown.bs.modal', function (e) {
             position_modal_at_centre();
         });
 
-        // when modal starts to close, fade in main content 
+        // when modal starts to close, fade in main content
         modal.on('hide.bs.modal', function (e) {
             $("#outer-container").fadeTo("fast",1);
         });
 
-        // when modal is hidden, empty modal body 
+        // when modal is hidden, empty modal body
         modal.on('hidden.bs.modal', function (e) {
             modal_body.empty(); // empty modal body
-        });       
+        });
 
     }
     // end: if modal and content container exists
 
-    event.preventDefault(); 
-    return false;     
+    event.preventDefault();
+    return false;
 }
 
 /*
@@ -740,7 +740,7 @@ function position_modal_at_centre()
         // end: for large viewports
 
         // for smaller viewports
-        else 
+        else
         {
             modal_content_container.removeAttr("style");
         }
@@ -762,7 +762,7 @@ function go_to_top_visibility()
     if (go_to_top_icon.length > 0)
     {
         var scroll_from_top = $(document).scrollTop();
-        
+
         // if at the top section of the page, hide icon
         if (scroll_from_top < viewport().height)
         {
@@ -788,7 +788,7 @@ function scroll_to_top()
     $('html, body').stop().animate({
         scrollTop: 0
     }, 1500,'easeInOutCubic', function(){
-        $("#go-to-top").removeClass("active"); // deactive scroll to top icin     
+        $("#go-to-top").removeClass("active"); // deactive scroll to top icin
     });
 }
 
@@ -825,7 +825,7 @@ function load_images(images_objects_selector_class, remove_selector_class_after_
         // load images
         var new_image_object = new Image();
         var count_images_to_load = images.length;
-        for(i=0; i<count_images_to_load; i++) 
+        for(i=0; i<count_images_to_load; i++)
         {
             new_image_object.src = images[i]["img_src"];
             images[i]["img_object"].attr("src", images[i]["img_src"]);
@@ -857,7 +857,7 @@ function validate_and_submit_forms(form_object)
 {
     var forms = (form_object !== undefined && form_object.length > 0) ? form_object : $("form.validate-form");
 
-    // for each form 
+    // for each form
     forms.each(function(){
 
         var this_form = $(this);
@@ -927,12 +927,12 @@ function validate_and_submit_forms(form_object)
                         errors_found = true;
                     }
                     // end: if there are errors
-                }               
+                }
             });
             // end: for each field
 
             // if errors were found, stop form from being submitted
-            if (errors_found == true) 
+            if (errors_found == true)
             {
                 // hide loader
                 $(this).find(".form-loader").fadeOut("fast");
@@ -945,7 +945,7 @@ function validate_and_submit_forms(form_object)
                 url: form_action,
                 data: $(this).serialize(),
                 dataType: 'html',
-                success: function (data) 
+                success: function (data)
                 {
                     // if form submission was processed (successfully or not)
 
@@ -967,7 +967,7 @@ function validate_and_submit_forms(form_object)
                     // if form submitted successfully, empty fields
                     if (submission_successful == true) this_form.find(".form-control").val("");
                 },
-                error: function (data) 
+                error: function (data)
                 {
                     // if form submission wasn't processed
 
@@ -979,8 +979,8 @@ function validate_and_submit_forms(form_object)
                     this_form.find(".form-general-error-container").html(error_field_html).fadeIn("fast");
 
                 }
-            }); 
-            // end: submit form           
+            });
+            // end: submit form
         });
         // -------------- end: on Submit of form --------------
 
@@ -1013,7 +1013,7 @@ function validate_and_submit_forms(form_object)
 
             var single_field_error_details = new Array(); // will contain this field and its error
             single_field_error_details["field_object"] = $(this);
-            
+
             single_field_error_details["message"] = "success"; // default is success. If the above tests fail, replace message with error
 
             // if field is required and value is empty
@@ -1121,10 +1121,10 @@ function validate_and_submit_forms(form_object)
  {
     var forms = $("form");
 
-    // for each form 
+    // for each form
     forms.each(function()
     {
-        var this_form = $(this); 
+        var this_form = $(this);
 
         // for each input field
         $(this).find(".form-control").each(function()
@@ -1148,5 +1148,5 @@ function validate_and_submit_forms(form_object)
             }
         });
         // end: for each input field
-    });   
+    });
  }
